@@ -54,9 +54,9 @@ func TestStringCalculator_AddNumber1000And3_Return3(t *testing.T) {
 	assert.Equal(t, 3, result)
 }
 
-func TestStringCalculator_AddWithRegex(t *testing.T) {
+func TestStringCalculator_AddWithDynamicDelimiter(t *testing.T) {
 	s := new(StringCalculator)
-	result, err := s.Add(`//;\n1;2;5`)
+	result, err := s.Add(`//***\n1***2***5`)
 
 	if err != nil {
 		fmt.Printf(err.Error())
